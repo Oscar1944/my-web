@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./ResumeStyle.css">
+</head>
+<body style="background-color: black;">
+  <header>
+    <nav class="navbar navbar-expand  bg-style01">
+      <div class="navbar-brand" style="margin-right: auto;">
+        <h1 style="font-size: 4vmin;color: white;">
+          <b>My Website</b>
+        </h1>
+      </div>
+      <div id="navbar-btn-list">
+        <ul class="navbar-nav word-style">
+          <li class="nav-item">
+            <button class="btn btn-outline-light" type="button" v-on:click="btn_home"><b>主頁</b></button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-light" type="button" ><b>自我介紹</b></button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-light" type="button" v-on:click="btn_skill"><b>技術能力</b></button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-light" type="button" v-on:click="btn_project"><b>專題</b></button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div>
+    <div class="container white-word">
+      <div class="container text-center">
+        <strong style="font-size: 50px;" data-aos="fade-down" data-aos-duration="2500">Autobiography</strong><br>
+        <strong>------------------------------------------</strong>
+      </div>
+      <div class="container text-center">
+        <img src="./img/chen.jpg" class="main-img-frame" data-aos="fade-left" data-aos-duration="2000">
+        <div style="margin-top: 10px;" data-aos="fade-left" data-aos-duration="2000">
+            <h2 style="font-weight:bold;">陳佳辰</h2>
+            <p>JIA,CHEN-CHEN</p>
+        </div>
+        <pre class="text-center white-word content-font-size" style="margin-top: 4%;" data-aos="zoom-in" data-aos-duration="1500">
+          Hello ! 我是佳辰，畢業於淡江大學 資訊管理學系。大學期間，我樂於參加活動來培養自己的喜好，
+          也因為熱愛交際相處因此結識了不少朋友，平時與朋友們互動相處都相當融洽。
+
+          大四期間，開始製作畢業專題，並擔任專題組長。帶領團隊一起完成專題的製作，
+          並成功參加2019年資訊服務創新競賽。在這過程中，我學習到團隊溝通及問題處理的技巧和心態。
+          由於主修資訊以及專題製作的關係，漸漸培養了我對於程式開發的興趣和成就感。
+
+          儘管在大學期間，盡力去學習各種新知，以及透過專題及一些實作來累積自己的開發經驗，
+          但實際踏入職場發揮所學的經驗仍甚不足矣。畢竟學無止境，資訊產業中，
+          技術種類多樣且不曾停止進步，唯有不斷學習，才能掌握這些技術和知識。
+
+          因此，我希望能夠進入相關產業，見識業界實際且專業的開發流程和技術。過程中，
+          努力學習各類新知、精進自身能力，不斷進步，並逐步往全端工程師的方向邁進。
+          也期望自己能表現得盡善盡美，成為公司的助力！
+        
+        </pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4" class="active"></li>
+      </ol>
+      <div class="carousel-inner text-center" style="margin-top: 5%; margin-bottom: 5%;">
+        <div class="carousel-item active">
+          <img src="./img/innoserve-sirilanka.jpg" class="d-block w-100 carousel-img" >
+        </div>
+        <div class="carousel-item">
+          <img src="./img/demo-team.jpg" class="d-block w-100 carousel-img">
+        </div>
+        <div class="carousel-item" style="height: 90%;">
+          <img src="./img/campaing.jpg" class="d-block w-100 carousel-img">
+        </div>
+        <div class="carousel-item" style="height: 90%;">
+          <img src="./img/Innoserve-solo.jpg" class="d-block w-100 carousel-img">
+        </div>
+        <div class="carousel-item" style="height: 90%;">
+          <img src="./img/trip-bro.jpg" class="d-block w-100 carousel-img">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+    var aaa = new Vue({
+      el:'#navbar-btn-list',
+      data:{
+        message: "Hello Vue!"
+      },
+      methods:{
+        btn_home: function(){
+          location.assign("./index.html");
+        },
+        btn_biography: function(){
+          location.assign("./autobiography.html");
+        },
+        btn_skill: function(){
+          location.assign("./skill.html");
+        },
+        btn_project: function(){
+          location.assign("./project.html");
+        },
+        btn_futrue: function(){
+          location.assign("./future.html");
+        }
+      }
+    })
+  </script>
+</body>
+</html>

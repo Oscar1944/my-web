@@ -1,0 +1,233 @@
+@import url(./css/notosanstc.css);
+
+.nav_elem{
+    background-color: blue;
+    display: flex;
+    justify-content: space-around;
+}
+.nav_right_elem{
+    background-color: blue;
+    display: inline-block;
+    margin-left: 99vmin;
+
+}
+.navbar-nav{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.main_nav_item_list_div{
+    margin-left: 90vmin;
+}
+.nav-item{
+    margin-left: 10px;
+}
+.bg-style01{
+    background-color: rgba(128, 128, 128, 0.6);
+}
+.home-page-content{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+
+}
+.main-img-frame{
+    width: 20%;
+    height: 60%;
+    border-radius: 5rem;
+    margin-top: 20px;
+}
+.white-word{
+    color: white;
+    font-family: "Microsoft JhengHei";
+}
+.skill-col-title{
+    font-size: 35px;
+}
+.skill-col-content{
+    margin-right: 5%;
+}
+.img-thumbnail-02 {
+    padding: .25rem;
+    background-color: rgb(94, 88, 88);
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+.content-font-size{
+    font-size: 20px;
+    font-family: "Microsoft JhengHei";
+}
+.word-style{
+    font-family: "Microsoft JhengHei";
+}
+.nav-opacity{
+    opacity: 0.5;
+}
+#home-line-1{
+    height: 30%;
+    border-left: solid;
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    position: absolute;
+    top: 55%;
+    left: 10%;
+}
+#home-line-2{
+    width: 4%;
+    border-bottom: solid;
+    color:rgb(255, 255, 255);
+    border-width: 1px;
+    position: absolute;
+    top: 43%;
+    left: 18%;
+    font-size: 8vmin;
+    font-weight: 700;
+    font-family: 'Comic Sans MS';
+    font-style: italic;
+}
+#home-line-3{
+    width: 9%;
+    border-bottom: solid;
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    position: absolute;
+    top: 20%;
+    left: 29%;
+}
+#home-line-4{
+    height: 20%;
+    border-left: solid;
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    position: absolute;
+    top: 40%;
+    left: 31%;
+    font-weight: 700;
+    font-size: 5vmin;
+    font-style: italic;
+    font-family: 'Comic Sans MS';
+}
+#home-line-5{
+    height: 10%;
+    border-left: solid;
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    position: absolute;
+    top: 70%;
+    left: 27%;
+}
+#home-line-6{
+    height: 20%;
+    border-left: solid;
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    position: absolute;
+    top: 20%;
+    left: 55%;
+}
+#home-line-7{
+    width: 20%;
+    border-bottom: solid;
+    color: #b5b5b4;
+    border-width: 1px;
+    position: absolute;
+    top: 70%;
+    left: 47%;
+    font-size: 5vmin;
+    font-family: 'Microsoft JhengHei';
+    font-weight: 700;
+}
+#home-line-8{
+    width: 6%;
+    border-bottom: solid;
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    position: absolute;
+    top: 23%;
+    left: 73%;
+}
+#home-line-9{
+    width: 13%;
+    border-bottom: solid;
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    position: absolute;
+    top: 53%;
+    left: 61%;
+}
+#home-line-10{
+    height: 40%;
+    border-left: solid;
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    position: absolute;
+    top: 35%;
+    left: 90%;
+}
+#line-2-text{
+    position: absolute;
+    top: 32%;
+    left: 16%;
+    font-size: 8vmin;
+    font-weight: 700;
+    font-family: 'Comic Sans MS';
+    font-style: italic;
+}
+#line-4-text{
+    position: absolute;
+    top: 54%;
+    left: 32%;
+    font-weight: 700;
+    font-size: 5vmin;
+    font-style: italic;
+    font-family: 'Comic Sans MS';
+}
+#line-7-text{
+    color: #b5b5b4;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    font-size: 5vmin;
+    font-family: 'Microsoft JhengHei';
+    font-weight: 700;
+}
+#home-name{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    display: flex;
+    flex-direction: row;
+}
+#home-name-word-1{
+    font-size: 18vmin;
+    color:rgba(241, 240, 240, 0.979);
+    font-weight: 600;
+}
+#home-name-word-2{
+    font-size: 18vmin;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+#home-name-word-3{
+    font-size: 18vmin;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+.hollow-word{
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color:#b5b5b4;
+}
+#english-name{
+    position: absolute;
+    top: 45%;
+    left: 66%;
+    color: rgb(0, 0, 0);
+    font-size: 5vmin;
+    font-weight: 100;
+    font-style: bold;
+}
+.carousel-img{
+    object-fit: contain;
+    height: 70vmin;
+}

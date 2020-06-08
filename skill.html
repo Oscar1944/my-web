@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./ResumeStyle.css">
+</head>
+<body style="background-color: black;">
+  <header>
+    <nav class="navbar navbar-expand  bg-style01">
+      <div class="navbar-brand" style="margin-right: auto;">
+        <h1 style="font-size: 4vmin;color: white;">
+          <b>My Website</b>
+        </h1>
+      </div>
+      <div id="navbar-btn-list">
+        <ul class="navbar-nav word-style">
+          <li class="nav-item">
+            <button class="btn btn-outline-light" type="button" v-on:click="btn_home"><b>主頁</b></button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-light" type="button" v-on:click="btn_biography"><b>自我介紹</b></button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-light" type="button"><b>技術能力</b></button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-light" type="button" v-on:click="btn_project"><b>專題</b></button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="container text-center white-word">
+    <strong style="font-size: 50px;"  data-aos="fade-down" data-aos-duration="2000">Skills</strong><br>
+    <strong >------------------------------------------</strong>
+  </div>
+  <div class="container text-center white-word" style="margin-top: 5%;">
+      <div class="row">
+          <div class="col skill-col-content"  data-aos="zoom-in-up" data-aos-duration="2500">
+              <div class="skill-col-title">Programming</div>
+              <hr color="white">
+              <ul style="font-size: 20px;">
+                  <li>JAVA</li>
+                  <li>JavaScript</li>
+                  <li>Html / CSS</li>
+                  <li>Vue.js</li>
+                  <li>Boostrap</li>
+                  <li>Anime</li>
+                  <li>AOS</li>
+                  <li>Android</li>
+              </ul>
+            </div>
+          <div class="col skill-col-content"  data-aos="zoom-in-up" data-aos-duration="2500">
+                <div class="skill-col-title">IDE/Editor</div>
+                <hr color="white">
+                <ul style="font-size: 20px;">
+                    <li>NetBeans</li>
+                    <li>Android Studio</li>
+                    <li>Visual Studio Code</li>
+                </ul>
+              </div>
+          <div class="col skill-col-content"  data-aos="zoom-in-up" data-aos-duration="2500">
+                <div class="skill-col-title">Strengths</div>
+                <hr color="white">
+                <ul style="font-size: 20px;">
+                    <li>Problem Solving</li>
+                    <li>Teamwork</li>
+                    <li>Communicative</li>
+                    <li>Responsibility</li>
+                    <li>Self-motivated</li>
+                    <li>Positive</li>
+                    <li>Flexible</li>
+                    <li>Optimist</li>
+                </ul>
+              </div>  
+          <div class="col skill-col-content"  data-aos="zoom-in-up" data-aos-duration="2500">
+                <div class="skill-col-title">Language</div>
+                <hr color="white">
+                <ul style="font-size: 20px;">
+                    <li>Chinese</li>
+                    <li>English</li>
+                </ul>
+              </div>     
+      </div>
+      <div class="container" style="width: 70%;margin-top: 5%;margin-bottom: 5%;" data-aos="zoom-out" data-aos-duration="1500" data-aos-offset="50px">
+        <img src="./img/TOEIC.png" class="img-thumbnail-02" style="width: 100%;">
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+    var aaa = new Vue({
+      el:'#navbar-btn-list',
+      data:{
+        message: "Hello Vue!"
+      },
+      methods:{
+        btn_home: function(){
+          location.assign("./index.html");
+        },
+        btn_biography: function(){
+          location.assign("./autobiography.html");
+        },
+        btn_skill: function(){
+          location.assign("./skill.html");
+        },
+        btn_project: function(){
+          location.assign("./project.html");
+        },
+        btn_futrue: function(){
+          location.assign("./future.html");
+        }
+      }
+    })
+  </script>
+</body>
+</html>

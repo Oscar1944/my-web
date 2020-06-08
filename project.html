@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./ResumeStyle.css">
+</head>
+<body style="background-color: black;">
+    <header>
+        <nav class="navbar navbar-expand bg-style01 ">
+          <div class="navbar-brand" style="margin-right: auto;">
+            <h1 style="font-size: 4vmin;color: white;">
+              <b>My Website</b>
+            </h1>
+          </div>
+          <div id="navbar-btn-list">
+            <ul class="navbar-nav word-style">
+              <li class="nav-item">
+                <button class="btn btn-outline-light" type="button" v-on:click="btn_home"><b>主頁</b></button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-light" type="button" v-on:click="btn_biography"><b>自我介紹</b></button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-light" type="button" v-on:click="btn_skill"><b>技術能力</b></button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-light" type="button"><b>專題</b></button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div class="container text-center white-word">
+        <strong style="font-size: 50px;" data-aos="fade-down" data-aos-duration="2000">Project</strong><br>
+        <strong>------------------------------------------</strong>
+      </div>
+
+      <div class="container" id="introduction">
+      <div class="container text-center white-word" data-aos="zoom-in" data-aos-duration="2000">
+        <strong style="font-size: 35px;">Introdution</strong>
+        <hr color="white">
+      </div>
+      <div class="container white-word row" style="font-size: 30px; margin-top: 5%; font-family: Microsoft JhengHei;" >
+        <ul class="col"data-aos="zoom-in" data-aos-duration="2000" >
+            <li>名稱: 資管系 畢業專題</li>
+            <li>主題: TriperGo APP</li>
+            <li>職位: 組長 / Developer</li>
+            <li>開發工具: Android Studio</li>
+            <li>資料庫: FireBase</li>
+        </ul>
+          <div class="col text-center" style="padding-top: 10%;">
+            <img src="./img/firebase-icon.png" style="width: 45%;" class="img-thumbnail" data-aos="flip-right" data-aos-duration="2000">
+            <img src="./img/androidstudio-icon.png" style="width: 52%;" class="img-thumbnail" data-aos="flip-left" data-aos-duration="2000">
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="content" style="margin-top: 10px;">
+        <div class="container text-center white-word" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="130">
+          <strong style="font-size: 35px;">Content</strong>
+          <hr color="white">
+        </div>
+
+        <div class="row container" id="content-01" style="margin-top: 5%;" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100">
+          <div class="col text-left" >
+            <img src="./img/menu-app.jpg" style="width: 50%;" class="img-thumbnail-02">
+          </div>
+          <div class="col white-word content-font-size" style="width: 50%;">
+            <pre class="white-word" style="width: 100%;">
+TriperGo app的主介面主要是讓使用者選擇需要進行的服務，
+可透過點擊按鈕進行換頁。版面圖片當時是以photoshop完成再載入app中。
+android技術部分:
+
+Button btn_point =(Button)findViewById(R.id.btn_point);
+  //根據ID取得對應物件
+
+  //對物件設定事件處理器
+btn_point.setOnClickListener(new View.OnClickListener() {
+  @Override
+  public void onClick(View v) {
+    Intent intent =new Intent(MainActivity.this,point_countyselect.class);
+     //Intent類別可儲存分頁
+
+    startActivity(intent);
+     //用startActivity函式驅動上面建立的Intent物件
+  }
+});
+            </pre>
+          </div>
+        </div>
+
+        <div class="row container content-font-size" id="content-02" style="margin-top: 5%;" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100">
+          <div class="col white-word" style="width: 50%;" >
+            <pre class="white-word" style="width: 100%;">
+  //先以上述方法取得對應的物件RadioButton
+rb_kelong =(RadioButton)findViewById(R.id.kelong);
+
+  //由於此版內容有兩個RadioButtonGroup，為避免兩個Group都有取值
+所以個別在radioButton的CheckedChange事件函式內寫入
+public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+  switch (buttonView.getId()){
+      case R.id.taipei:
+          rg2.clearCheck();
+          break;
+      ......略
+      //用switch判斷被選擇ID是哪個RadioButton以及未在哪個group
+      把未被選取的group清空以免造成錯誤
+
+  //為RadioButton設定事件處理器
+rb_taipei.setOnCheckedChangeListener(this);
+
+  //然後再到"搜尋鍵"的Click事件處理器中，在onClick事件內寫上
+switch (rg1.getCheckedRadioButtonId()){
+  case R.id.taipei:
+      Intent intent_taipei =new Intent(point_countyselect.this,point_taipei.class);
+      startActivity(intent_taipei);
+      break;
+       //用switch判斷被選取的group並從中找到被選取的RadioButton，然後前往對應的頁面
+            </pre>
+          </div>
+          <div class="col text-right" >
+            <img src="./img/select.jpg" style="width: 60%;" class="img-thumbnail-02">
+          </div>
+        </div>
+
+        <div class="row container content-font-size" id="content-03" style="margin-top: 5%;" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100">
+          <div class="col text-lefts">
+            <img src="./img/address.jpg" style="width: 60%;" class="img-thumbnail-02">
+          </div>
+          <!--此<pre>為避免重複bar問題因此無<div>包覆，以後可考慮此設計-->
+          <pre class="col white-word" style="width: 50%;height: 90vmin; overflow: scroll;">
+  //此頁面會用ListView來呈現從firebase資料庫中取得的資料
+  //先以findViewById()方法取得對應的ListView物件
+final ListView list =(ListView)findViewById(R.id.list);
+
+  //對已建立的Firebase資料庫進行現連接
+DatabaseReference ref_contact = FirebaseDatabase.getInstance().getReference("桃園");
+  //DatabaseReference 用來建立對一個資料庫的連線
+  //FirebaseDatabase.getInstance() 用來取得整個firebase資料庫的實例
+  //getReference() 函式內可輸入相關之參數(資料庫內的位置參照名稱)，用來指定參考至資料庫的特定位置
+
+  //要對ListView載入資料，必須使用Adapter物件，專題使用的ArrayAdapter只是其中一種
+  //ArrayAdapter可以將一個陣列在入ListView中
+  //先建立一個ArrayAdapter物件並進行設定
+final ArrayAdapter< String > adapter =new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,android.R.id.text1);
+  //在new Adapter所帶入的三個參數，第一個指的是Context，第二個是載入ListView的排版(Layout)方式，第三個是載入的陣列
+  //ListView的Layout方式多種，simple_list_item_1只是其中一種，這些Layout方式內建在Android內，是專門為ListView的item所使用的，因此
+須從android.R.layout中呼叫使用
+
+  //為ListView設定上Adapter
+list.setAdapter(adapter);
+
+  //addValueEventListener是FireBase中，可以進入getReference()指向的資料庫位置獲取資料的方式之一
+ref_contact.addValueEventListener(new ValueEventListener() {
+  @Override
+  public void onDataChange(@NonNull DataSnapshot dataSnapshot) { //DataSnapshot物件可以理解為，
+    從資料庫傳回的資料集合之物件，資料內容就是先前指定資料庫位置參照的資料內容
+      adapter.clear(); //對adapter初始化
+      String name;
+      String location;
+
+      String x =dataSnapshot.child("t").getValue().toString(); //從資料庫內取得資料"t"，"t"是資料庫內紀錄資料總數的欄位
+      int t =Integer.parseInt(x);
+      String s;
+      for(int i =0;i < t;i++){  //用迴圈逐一取出對應順序的景點名稱及地點資料
+          s =String.valueOf(i);
+          name =dataSnapshot.child(s).child("0").getValue().toString();
+          location =dataSnapshot.child(s).child("1").getValue().toString();
+
+          adapter.add(name+"\n"+location);  //將取出的資料加入adapter內
+      }
+  }
+            </pre>
+        </div>
+
+        <div class="row container text-left content-font-size" id="content-04" style="margin-top: 5%;" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100">
+          <div class="col white-word" style="width: 50%;">
+            <pre class="white-word" style="width: 100%;padding-top: 20%;">
+這部份資訊我們將其放入以WenNode製作的網站中
+，並和App連接，可從app中跳入網頁部分。
+在網頁部分有和LINE連結，也可從LINE平台獲得相關資訊。
+            </pre>
+          </div>
+          <div class="col" >
+            <img src="./img/line-trip.jpg" style="width: 49%;" class="img-thumbnail-02">
+            <img src="./img/content-web.jpg" style="width: 49%;" class="img-thumbnail-02">
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="develope" style="margin-top: 20px;padding-bottom: 2%;">
+        <div class="container white-word text-center" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="100">
+          <strong style="font-size: 35px;">Developement Team</strong>
+          <hr color="white">
+        </div>
+        <div class="text-center" style="margin-top: 5%;">
+          <pre class="white-word content-font-size text-left" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="100">
+  專題作品android程式的部分都是由我來負責開發，從最初的討論與設計，
+程式實作，資料庫設計與串接，問題處理，系統測試，專題文書撰寫，及最後的專題發表。<br>
+  身為組長，更是必須擔起責任，包括各項事務的進度和協調，定期的招開會議等。專題開發的過程中，
+當然少不了遇到各式技術問題，如何尋求幫助並解決問題是也是一種能力。<br>
+  在專題發表和資服競賽的過程中，我看見了許多厲害的組別和作品。透過這些經驗，我看見了自己的不足，
+這使我有更多的動力和理由去學習和精進自身的能力。
+我相信，透過付出努力，而後獲得並看見自己的進步，這樣的心態回饋一定有助於我在未來迎向更多的嘗試及挑戰。
+           
+          </pre>
+          <div data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100">
+            <p class="white-word" style="font-size: 30px;font-family: Microsofht JhengHei;">
+              <strong>開發團隊</strong>
+            </p>
+            <img src="./img/team.jpg" style="width: 50%;" class="img-thumbnail-02">
+        </div>
+        <div style="margin-top: 5%;" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100">
+          <p class="white-word" style="font-size: 30px; font-family: Microsoft JhengHei;">
+            <strong>參賽證明</strong>
+          </p>
+          <img src="./img/InnoServe.png" style="width: 50%;" class="img-thumbnail-02">
+        </div>
+        </div>
+      </div>
+      
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+      var aaa = new Vue({
+        el:'#navbar-btn-list',
+        data:{
+          message: "Hello Vue!"
+        },
+        methods:{
+          btn_home: function(){
+            location.assign("./index.html");
+          },
+          btn_biography: function(){
+            location.assign("./autobiography.html");
+          },
+          btn_skill: function(){
+            location.assign("./skill.html");
+          },
+          btn_project: function(){
+            location.assign("./project.html");
+          },
+          btn_futrue: function(){
+            location.assign("./future.html");
+          }
+        }
+      })
+    </script>
+</body>
+</html>
