@@ -20,13 +20,13 @@
           <div id="navbar-btn-list">
             <ul class="navbar-nav word-style">
               <li class="nav-item">
-                <button class="btn btn-outline-light" type="button" v-on:click="btn_home"><b>主頁</b></button>
+                <button class="btn btn-outline-light" type="button" onclick="btn_index()"><b>主頁</b></button>
               </li>
               <li class="nav-item">
-                <button class="btn btn-outline-light" type="button" v-on:click="btn_biography"><b>自我介紹</b></button>
+                <button class="btn btn-outline-light" type="button" onclick="btn_autobiography()"><b>自我介紹</b></button>
               </li>
               <li class="nav-item">
-                <button class="btn btn-outline-light" type="button" v-on:click="btn_skill"><b>技術能力</b></button>
+                <button class="btn btn-outline-light" type="button" onclick="btn_skill()"><b>技術能力</b></button>
               </li>
               <li class="nav-item">
                 <button class="btn btn-outline-light" type="button"><b>專題</b></button>
@@ -235,29 +235,18 @@ ref_contact.addValueEventListener(new ValueEventListener() {
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
     <script>
-      var aaa = new Vue({
-        el:'#navbar-btn-list',
-        data:{
-          message: "Hello Vue!"
-        },
-        methods:{
-          btn_home: function(){
-            location.assign("./index.html");
-          },
-          btn_biography: function(){
-            location.assign("./autobiography.html");
-          },
-          btn_skill: function(){
-            location.assign("./skill.html");
-          },
-          btn_project: function(){
-            location.assign("./project.html");
-          },
-          btn_futrue: function(){
-            location.assign("./future.html");
-          }
-        }
-      })
+      function btn_index(){
+        window.location.href="./index.html";
+    };
+    function btn_autobiography(){
+        window.location.href="./autobiography.html";
+    };
+    function btn_skill(){
+        window.location.href="./skill.html";
+    };
+    function btn_project(){
+        window.location.href="./project.html";
+    };
     </script>
 </body>
 </html>
